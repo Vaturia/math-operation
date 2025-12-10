@@ -15,7 +15,7 @@ int multiplication(int a, int b, long long &result)
     result = a * b;
     return 0;
 }
-int division(int a, int b, double &result)
+int division(int a, int b,  long long &result)
 {
     if(b == 0)
     {
@@ -35,7 +35,7 @@ int exponentiation(int a, int b, long long &result)
     return 0;
 }
 long long factorial(unsigned int a)
-{   
+{
     if(a > 1)
     {
         return a * (factorial(a - 1));
