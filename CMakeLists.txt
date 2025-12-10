@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.31.6)
+cmake_minimum_required(VERSION 3.25.1)
 
-project (math_library )
+project (math_library)
 
 set(SOURCE_LIB src/math_library.cpp)
 add_library(math_library ${SOURCE_LIB})
