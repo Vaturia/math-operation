@@ -1,21 +1,21 @@
 #include "math_library.h"
 #include <cstdlib>
-int addition(int a, int b, long long &result)
+int math_operations::addition(int a, int b, long long &result)
 {
     result = a + b;
     return 0;
 }
-int subtraction(int a, int b, long long &result)
+int math_operations::subtraction(int a, int b, long long &result)
 {
     result =  a - b;
     return 0;
 }
-int multiplication(int a, int b, long long &result)
+int math_operations::multiplication(int a, int b, long long &result)
 {
     result = a * b;
     return 0;
 }
-int division(int a, int b,  long long &result)
+int math_operations::division(int a, int b,  long long &result)
 {
     if(b == 0)
     {
@@ -24,7 +24,7 @@ int division(int a, int b,  long long &result)
     result = a / b;
     return 0;
 }
-int exponentiation(int a, int b, long long &result)
+int math_operations::exponentiation(int a, int b, long long &result)
 {
     if(b < 0) {return -1;};
     result = 1;
@@ -34,7 +34,7 @@ int exponentiation(int a, int b, long long &result)
     }
     return 0;
 }
-long long factorial(unsigned int a)
+long long math_operations::factorial(unsigned int a)
 {
     if(a > 1)
     {
