@@ -15,18 +15,20 @@ find_program(CLANG_FORMAT "clang-format")
 if(CLANG_FORMAT)
 
     set(ALL_LIB_FILES
-        ${CMAKE_CURRENT_SOURCE_DIR}/${SOURCE_LIB}
-        ${CMAKE_CURRENT_SOURCE_DIR}/${HEADER_LIB}
+        ${SOURCE_LIB}
+        ${HEADER_LIB}
     )
 
     add_custom_target(format-lib
         COMMAND ${CLANG_FORMAT} -i ${ALL_LIB_FILES}
         COMMENT "Formattin lib files"
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
 
     add_custom_target(check-format-lib
         COMMAND ${CLANG_FORMAT} --dry-run --Werror ${ALL_LIB_FILES}
         COMMENT "Check format"
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
 else()
     message(WARNING "clang-format not found.")
