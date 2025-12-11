@@ -14,7 +14,7 @@ FetchContent_Declare(
 )
 
 FetchContent_MakeAvailable(math_library)
-target_link_libraries(YOUR_PROJECT math_library)
+target_link_libraries(${YOUR_PROJECT} math_library)
 ```
 In your source files use
 ```cpp
