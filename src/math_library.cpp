@@ -1,7 +1,6 @@
 #include "math_library.h"
 
-#include <cstdlib>
-int math_operations::addition(int a, int b, long long &result)
+int addition(int a, int b, long long &result)
 {
     result = a + b;
     return 0;
