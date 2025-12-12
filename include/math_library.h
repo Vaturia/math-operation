@@ -1,4 +1,5 @@
 #pragma once
+
 namespace math_operations
 {
     int addition(int a, int b, long long &result);
